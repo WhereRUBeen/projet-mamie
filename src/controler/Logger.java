@@ -1,11 +1,15 @@
 package controler;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import entities.Utilisateur;
 
 /**
  * Servlet implementation class loggin
@@ -13,12 +17,17 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/loggin")
 public class Logger extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    ArrayList<Utilisateur> mesUtilisateur = new ArrayList<Utilisateur>(); 
+	
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
     public Logger() {
         super();
+        
+        
+        
         // TODO Auto-generated constructor stub
     }
 
@@ -35,6 +44,13 @@ public class Logger extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		String login = (String) request.getParameter("login");
+		String mdp = (String) request.getParameter("password");
+		
+	
+		
+		
 		doGet(request, response);
 	}
 
