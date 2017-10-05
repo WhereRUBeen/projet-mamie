@@ -16,7 +16,7 @@ public class ConnectionBDD {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url, identifiant, pwd);
 		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+			// TODO Auto-generated catch 
 			e.printStackTrace();
 		}
 	}
