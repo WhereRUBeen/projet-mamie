@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import actions.ActionUtilisateur;
 import entities.Utilisateur;
 
 /**
@@ -17,7 +18,7 @@ import entities.Utilisateur;
 @WebServlet("/loggin")
 public class Logger extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    ArrayList<Utilisateur> mesUtilisateur = new ArrayList<Utilisateur>(); 
+    
 	
 	
     /**
@@ -26,14 +27,13 @@ public class Logger extends HttpServlet {
     public Logger() {
         super();
         
-        
-        
         // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -42,11 +42,9 @@ public class Logger extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-		String login = (String) request.getParameter("login");
-		String mdp = (String) request.getParameter("password");
 		
 	
 		
