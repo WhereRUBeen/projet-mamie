@@ -4,6 +4,9 @@ body, html, .row-offcanvas {
 	height: 100%;
 }
 
+#divRecette {
+	background: #fbd8c9;
+}
 
 /*LE MENU DE NAVIGATION*/
 .navbar-nav {
