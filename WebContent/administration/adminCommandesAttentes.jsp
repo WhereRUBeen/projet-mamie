@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nouvelle Recette | Mamie Clafoutis</title>
+<title>Accueil | Administration</title>
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,17 +12,26 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 <link rel="stylesheet" href="style/adminAccueil.css">
 
+<script>
+	$(document).ready(function() {
+		$('[data-toggle=offcanvas]').click(function() {
+			$('.row-offcanvas').toggleClass('active');
+		});
+	});
+</script>
 <style>
 @charset "UTF-8";
 
-body, html, .row-offcanvas {
-	height: 100%;
+#divCommandesAttentes {
+	background:#fbd8c9;
 }
 
-h1 {
-	color: red;
+body, html, .row-offcanvas {
+	height: 100%;
 }
 
 /*LE MENU DE NAVIGATION*/
@@ -112,92 +120,36 @@ body {
 	height: 50px;
 	padding-left: 13px;
 }
-
-#divRecette {
-	background-color: #fbd8c9;
-	margin: auto;
-}
-
-h1 {
-	text-align: center;
-	color: #a8a8a8;
-}
-
-form {
-	max-width: 600px;
-	text-align: center;
-	margin: 20px auto;
-}
-
-input, textarea {
-	border: 0;
-	outline: 0;
-	padding: 1em;
-	display: block;
-	width: 100%;
-	margin-top: 1em;
-	font-family: 'Merriweather', sans-serif;
-}
-
-.half {
-	float: left;
-	width: 48%;
-	margin-bottom: 1em;
-	margin-left: 5px;
-}
-
-@media ( max-width : 480px) {
-	.half {
-		width: 100%;
-		float: none;
-		margin-bottom: 0;
-	}
-}
 </style>
 
-
-
-<script>
-	$(document).ready(function() {
-		$('[data-toggle=offcanvas]').click(function() {
-			$('.row-offcanvas').toggleClass('active');
-		});
-	});
-</script>
 </head>
 <body>
-
-
-	<header>
-
-		<div class="navbar navbar-inverse navbar-fixed-top ">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Mami Cafoutie</a>
-			</div>
-			<div class="collapse navbar-collapse ">
-				<ul class="nav navbar-nav ml-auto">
-
-					<li><a href="#">Deconexion</a></li>
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
+	<div class="navbar navbar-inverse navbar-fixed-top ">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Mami Cafoutie</a>
 		</div>
-		<!--/.navbar -->
+		<div class="collapse navbar-collapse ">
+			<ul class="nav navbar-nav ml-auto">
 
+				<li><a href="#">Deconexion</a></li>
+			</ul>
+		</div>
+		<!--/.nav-collapse -->
+	</div>
+	<!--/.navbar -->
 
-	</header>
 	<div class="row-offcanvas row-offcanvas-left">
 		<div id="sidebar" class="sidebar-offcanvas">
 			<div class="col-md-12">
 				<h3></h3>
 				<ul class="nav nav-pills nav-stacked">
-					<li class="active"><a href="adminAccueil.html">Administration</a></li>
-					<li><a href="#">Nouvelle recette</a></li>
+					<li class="active"><a href="#">Administration</a></li>
+					<li><a href="nouvelleRecette.html">Nouvelle recette</a></li>
 					<li><a href="#">Liste des recettes</a></li>
 					<li class="divider"></li>
 					<div class="dropdown">
@@ -227,24 +179,21 @@ input, textarea {
 
 		</div>
 		<div id="main">
-			<!--  LE MAIN   -->
 			<div class="jumbotron"></div>
-			<div class="jumbotron" id="divRecette">
-				<h1>Nouvelle Recette</h1>
-				<form class="cf">
-					<div class="half left cf">
-						<input type="text" id="input-name" placeholder="Nom Recette">
-						<input type="email" id="input-email" placeholder="lorem">
-						<input type="text" id="input-subject" placeholder="lorem">
-						<input name="myFile" type="file">
-					</div>
-					<div class="half right cf">
-						<textarea name="message" type="text" id="input-message"
-							placeholder="Descripton" height="50 px"
-							style="margin: 14px -7px 0px 0px; height: 172px; width: 296px;"></textarea>
-					</div>
-					<input type="submit" value="Submit" id="input-submit">
-				</form>
+			<div class="jumbotron container " id="divCommandesAttentes">
+
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Numero Commande</th>
+							<th>Quantiés Produits</th>
+							<th>Prix total</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
 			</div>
 
 			<div class="jumbotron"></div>
@@ -252,13 +201,9 @@ input, textarea {
 
 
 
-
-
-
 		</div>
 	</div>
 	<!--/row-offcanvas -->
-
 
 </body>
 </html>
