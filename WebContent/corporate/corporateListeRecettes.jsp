@@ -116,6 +116,25 @@ body {
 	height: 50px;
 	padding-left: 13px;
 }
+
+/**/
+#divRecette {
+	background: #fbd8c9;
+}
+
+#premierDivListeRecettes {
+	background: #9e3c51;
+	margin-top: 25px;
+}
+
+#dernierDivListeRecette {
+	background: #9e3c51;
+}
+
+h2 {
+	text-align: center;
+	color: #fbd8c9;
+}
 </style>
 
 
@@ -159,8 +178,27 @@ body {
 		<div id="main">
 
 
-			<div class="jumbotron"></div>
-			<div class="jumbotron " id="divRecette">
+			<div class="jumbotron container" id="premierDivListeRecettes">
+				<h2>Liste des Recettes</h2>
+
+				<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4' id="divRecherche">
+
+					<form class='navbar-form'>
+						<div class='input-group'>
+							<input class='form-control' type='text' name='search'
+								placeholder='Recherche' /> <span class="input-group-btn">
+								<button type='submit' class='btn btn-default'>
+									<span class='glyphicon glyphicon-search'></span>
+								</button>
+							</span>
+
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+			<div class="jumbotron container" id="divRecette">
 
 				<table class="table table-hover">
 					<thead>
@@ -176,7 +214,7 @@ body {
 				</table>
 			</div>
 
-			<div class="jumbotron"></div>
+			<div class="jumbotron container " id="dernierDivListeRecette"></div>
 
 		</div>
 	</div>

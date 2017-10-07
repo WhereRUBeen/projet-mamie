@@ -1,10 +1,10 @@
 @charset "UTF-8";
+
 @charset "UTF-8";
 
 body, html, .row-offcanvas {
 	height: 100%;
 }
-
 
 /*LE MENU DE NAVIGATION*/
 .navbar-nav {
@@ -91,4 +91,23 @@ body {
 	/* position: relative; */
 	height: 50px;
 	padding-left: 13px;
+}
+
+/**/
+#premierDivCommandesAttentes {
+	background: #9e3c51;
+	margin-top: 25px;
+}
+
+#divCommandesAttentes {
+	background: #fbd8c9;
+}
+
+#dernierDivCommandesAttentes {
+	background: #9e3c51;
+}
+
+h2 {
+	text-align: center;
+	color: #fbd8c9;
 }
