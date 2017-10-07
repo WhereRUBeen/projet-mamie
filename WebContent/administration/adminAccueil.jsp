@@ -114,6 +114,25 @@ body {
 	height: 50px;
 	padding-left: 13px;
 }
+
+/**/
+#premierDivAdminAccueil {
+	background: #9e3c51;
+	margin-top: 25px;
+}
+
+#secondDivAdminAccueil {
+	background: #fbd8c9;
+}
+
+#dernierDivAdminAccueil {
+	background: #9e3c51;
+}
+
+h2 {
+	text-align: center;
+	color: #fbd8c9;
+}
 </style>
 </head>
 <body>
@@ -172,7 +191,30 @@ body {
 
 		</div>
 		<div id="main">
-			<h1>Admin accueil</h1>
+
+			<div class="jumbotron container" id="premierDivAdminAccueil">
+				<h2>Bienvenue</h2>
+
+				<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4' id="divRecherche">
+
+					<form class='navbar-form'>
+						<div class='input-group'>
+							<input class='form-control' type='text' name='search'
+								placeholder='Recherche' /> <span class="input-group-btn">
+								<button type='submit' class='btn btn-default'>
+									<span class='glyphicon glyphicon-search'></span>
+								</button>
+							</span>
+
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+			<div class="jumbotron container" id="secondDivAdminAccueil"></div>
+
+			<div class="jumbotron container" id="dernierDivAdminAccueil"></div>
 
 		</div>
 	</div>
