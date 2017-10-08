@@ -1,16 +1,17 @@
 package controler;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import actions.ActionUtilisateur;
-import entities.Utilisateur;
+import utils.AuthManager;
 
 /**
  * Servlet implementation class loggin
@@ -45,11 +46,40 @@ public class Logger extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String user = (String) request.getAttribute("login");
+		int userId = -1;
+		String psw = (String) request.getAttribute("password");
 		
+		if (AuthManager.userExist(user)){
+			userId = ActionUtilisateur.getIdByName(user);
+			if (AuthManager.pwsIsGood(psw, userId)){
+				AuthManager.setUserSession(userId, request);
+				
+				switch (ActionUtilisateur.getRoleId(userId)){
+					case 1 : response.sendRedirect("administration/adminAccueil.jsp"); break;
+					case 2 : response.sendRedirect("corporate/corporateAccueil.jsp"); break;
+					case 3 : response.sendRedirect("autre/autreAccueil.jsp"); break;
+		
+				}
+			}else{
+				Cookie tryCookie = new Cookie("tryed", "true");
+
+				tryCookie.setMaxAge(60*60*24);
+
+				response.addCookie(tryCookie);
+
+			}
+		}else{
+			Cookie tryCookie = new Cookie("tryed", "true");
+
+			tryCookie.setMaxAge(60*60*24);
+
+			response.addCookie(tryCookie);
+
+		}
 	
 		
 		
-		doGet(request, response);
+		
 	}
-
 }

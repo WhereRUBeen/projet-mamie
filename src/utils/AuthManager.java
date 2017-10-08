@@ -57,7 +57,11 @@ public class AuthManager {
 	public static boolean pwsIsGood(String psw, int id){
 		boolean retour = false;
 		
-		if(encrypte(psw).equals(ActionUtilisateur.getUserById(id).getMotdepasse())){retour = true;}
+		if(encrypte(psw).equals(ActionUtilisateur.getUserById(id).getMotdepasse())){
+			retour = true;
+			
+		
+		}
 		
 		return retour;
 	}

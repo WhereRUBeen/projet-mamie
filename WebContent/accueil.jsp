@@ -1,6 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<% Cookie[] cookies = request.getCookies();
+	boolean tryed = false;
+	
+	if (cookies != null){
+		for (int i = 0; i< cookies.length; i++){
+			Cookie cookie = cookies[i];	
+			if(cookies[i].getName().equals("tryed")){tryed = true;}
+		
+		}
+	}
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,10 +49,12 @@
 			<div class="collapse navbar-collapse ">
 				<ul class="nav navbar-nav ml-auto">
 					<li><a href="#">Inscription</a></li>
-					<li><a href="#myModal" data-toggle="modal">Connexion</a></li>
+					<li><a href="#myModal" data-toggle="modal">Connexion</a>
+					<span style="color:red; display:<%= tryed ? "inline" : "none"%>;">Identifiants incorects</span></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
+			
 		</div>
 		<!--/.navbar -->
 	</header>
@@ -243,7 +257,7 @@
 						aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form action="" method="post">
+					<form action="loggin" method="post">
 						<div class="form-group">
 							<i class="fa fa-user"></i> <input type="text"
 								class="form-control" placeholder="Username" required="required">
@@ -252,8 +266,11 @@
 							<i class="fa fa-lock"></i> <input type="password"
 								class="form-control" placeholder="Password" required="required">
 						</div>
+						
+						<span id="logError" style="color : red;"></span>
+						
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary btn-block btn-lg"
+							<input type="submit" id="subLog" class="btn btn-primary btn-block btn-lg"
 								value="Login">
 						</div>
 					</form>

@@ -13,8 +13,8 @@ public class Magasin implements Serializable{
 	
 	/*** attributs*/
 	private int id_magasin;
-	String nom_magasin;
-	String adresse_magasin;
+	private String nom_magasin;
+	private String adresse_magasin;
 	private int type_magasin;
 	
 	/*** Constructor*/
