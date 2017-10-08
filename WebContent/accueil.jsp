@@ -11,6 +11,13 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<script>function logError() {
+    
+    let perror = document.getElementById('logError');
+    let merror = "Erreur, vos identifiants sont invalide";
+    
+    perror.appendChild(merror);
+}</script>
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -252,8 +259,11 @@
 							<i class="fa fa-lock"></i> <input type="password"
 								class="form-control" placeholder="Password" required="required">
 						</div>
+						
+						<p id="logError" style="color : red;"></p>
+						
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary btn-block btn-lg"
+							<input type="submit" onclick="logError" class="btn btn-primary btn-block btn-lg"
 								value="Login">
 						</div>
 					</form>

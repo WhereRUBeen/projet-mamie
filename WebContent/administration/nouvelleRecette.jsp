@@ -22,10 +22,6 @@ body, html, .row-offcanvas {
 	height: 100%;
 }
 
-h1 {
-	color: red;
-}
-
 /*LE MENU DE NAVIGATION*/
 .navbar-nav {
 	float: right;
@@ -113,11 +109,6 @@ body {
 	padding-left: 13px;
 }
 
-#divRecette {
-	background-color: #fbd8c9;
-	margin: auto;
-}
-
 h1 {
 	text-align: center;
 	color: #a8a8a8;
@@ -152,6 +143,25 @@ input, textarea {
 		float: none;
 		margin-bottom: 0;
 	}
+}
+
+/**/
+#premierDivNouvelleRecette {
+	background: #9e3c51;
+	margin-top: 25px;
+}
+
+#secondDivNouvelleRecette {
+	background: #fbd8c9;
+}
+
+#dernierDivNouvelleRecette {
+	background: #9e3c51;
+}
+
+h2 {
+	text-align: center;
+	color: #fbd8c9;
 }
 </style>
 
@@ -228,9 +238,36 @@ input, textarea {
 		</div>
 		<div id="main">
 			<!--  LE MAIN   -->
-			<div class="jumbotron"></div>
-			<div class="jumbotron" id="divRecette">
-				<h1>Nouvelle Recette</h1>
+
+
+			<div class="jumbotron container" id="premierDivNouvelleRecette">
+				<h2>Nouvelle Recette</h2>
+
+
+				<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4' id="divRecherche">
+
+					<form class='navbar-form'>
+						<div class='input-group'>
+							<input class='form-control' type='text' name='search'
+								placeholder='Recherche' /> <span class="input-group-btn">
+								<button type='submit' class='btn btn-default'>
+									<span class='glyphicon glyphicon-search'></span>
+								</button>
+							</span>
+
+						</div>
+					</form>
+
+				</div>
+
+
+
+			</div>
+
+
+			<div class="jumbotron container" id="secondDivNouvelleRecette">
+
+
 				<form class="cf">
 					<div class="half left cf">
 						<input type="text" id="input-name" placeholder="Nom Recette">
@@ -238,16 +275,23 @@ input, textarea {
 						<input type="text" id="input-subject" placeholder="lorem">
 						<input name="myFile" type="file">
 					</div>
-					<div class="half right cf">
+					<div class="half right cf" id="secondDivNouvelleRecette">
 						<textarea name="message" type="text" id="input-message"
 							placeholder="Descripton" height="50 px"
 							style="margin: 14px -7px 0px 0px; height: 172px; width: 296px;"></textarea>
 					</div>
 					<input type="submit" value="Submit" id="input-submit">
 				</form>
+
 			</div>
 
-			<div class="jumbotron"></div>
+			<div class="jumbotron container" id="dernierDivNouvelleRecette">
+
+
+
+
+
+			</div>
 
 
 

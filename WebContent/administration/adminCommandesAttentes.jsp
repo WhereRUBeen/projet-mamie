@@ -120,6 +120,27 @@ body {
 	height: 50px;
 	padding-left: 13px;
 }
+
+
+
+/**/
+#premierDivCommandesAttentes {
+	background: #9e3c51;
+	margin-top: 25px;
+}
+
+#divCommandesAttentes{
+	background: #fbd8c9;
+}
+
+#dernierDivCommandesAttentes {
+	background: #9e3c51;
+}
+
+h2 {
+	text-align: center;
+	color: #fbd8c9;
+}
 </style>
 
 </head>
@@ -179,7 +200,28 @@ body {
 
 		</div>
 		<div id="main">
-			<div class="jumbotron"></div>
+			<div class="jumbotron container" id="premierDivCommandesAttentes">
+			
+					<h2>Commandes à validées</h2>
+
+				<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4' id="divRecherche">
+
+					<form class='navbar-form'>
+						<div class='input-group'>
+							<input class='form-control' type='text' name='search'
+								placeholder='Recherche' /> <span class="input-group-btn">
+								<button type='submit' class='btn btn-default'>
+									<span class='glyphicon glyphicon-search'></span>
+								</button>
+							</span>
+
+						</div>
+					</form>
+
+				</div>
+			
+			
+			</div>
 			<div class="jumbotron container " id="divCommandesAttentes">
 
 				<table class="table table-hover">
@@ -196,7 +238,7 @@ body {
 				</table>
 			</div>
 
-			<div class="jumbotron"></div>
+			<div class="jumbotron container" id="dernierDivCommandesAttentes"></div>
 
 
 

@@ -94,3 +94,23 @@ body {
 	height: 50px;
 	padding-left: 13px;
 }
+
+
+/**/
+#premierDivNouvelleRecette {
+	background: #9e3c51;
+	margin-top: 25px;
+}
+
+#secondDivNouvelleRecette {
+	background: #fbd8c9;
+}
+
+#dernierDivNouvelleRecette {
+	background: #9e3c51;
+}
+
+h2 {
+	text-align: center;
+	color: #fbd8c9;
+}
