@@ -1,6 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<% Cookie[] cookies = request.getCookies();
+	boolean tryed = false;
+	
+	if (cookies != null){
+		for (int i = 0; i< cookies.length; i++){
+			Cookie cookie = cookies[i];	
+			if(cookies[i].getName().equals("tryed")){tryed = true;}
+		
+		}
+	}
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +22,6 @@
 <title>Accueil | Mamie Clafoutis Entreprise</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<script src="../js/jquery.js"></script>
-<script src="../js/javascript.js">$(document).ready(function {
-    'use strict'
-	   $('#subLog').on('click', function(){
-	    
-	    
-	    let perror = document.getElementById('logError');
-	    let merror = "Erreur, vos identifiants sont invalide";
-	    
-	    perror.appendChild(merror);
-	    
-	})
-	    
-	    
-	    
-	    
-	    
-	});</script>
 
 
 <link rel="stylesheet"
@@ -56,10 +49,12 @@
 			<div class="collapse navbar-collapse ">
 				<ul class="nav navbar-nav ml-auto">
 					<li><a href="#">Inscription</a></li>
-					<li><a href="#myModal" data-toggle="modal">Connexion</a></li>
+					<li><a href="#myModal" data-toggle="modal">Connexion</a>
+					<span style="color:red; display:<%= tryed ? "inline" : "none"%>;">Identifiants incorects</span></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
+			
 		</div>
 		<!--/.navbar -->
 	</header>

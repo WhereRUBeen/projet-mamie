@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -58,14 +59,27 @@ public class Logger extends HttpServlet {
 					case 1 : response.sendRedirect("administration/adminAccueil.jsp"); break;
 					case 2 : response.sendRedirect("corporate/corporateAccueil.jsp"); break;
 					case 3 : response.sendRedirect("autre/autreAccueil.jsp"); break;
-					
-					
+		
 				}
+			}else{
+				Cookie tryCookie = new Cookie("tryed", "true");
+
+				tryCookie.setMaxAge(60*60*24);
+
+				response.addCookie(tryCookie);
+
 			}
+		}else{
+			Cookie tryCookie = new Cookie("tryed", "true");
+
+			tryCookie.setMaxAge(60*60*24);
+
+			response.addCookie(tryCookie);
+
 		}
 	
 		
-	
+		
+		
 	}
-
 }
