@@ -9,6 +9,8 @@ public class ActionUtilisateur {
 
 	public static ArrayList<Utilisateur> getAllUtilisateur(){
 		
+		
+		
 		return null;
 	}
 	
@@ -36,6 +38,15 @@ public class ActionUtilisateur {
 		}
 		
 		return reponse;
+	}
+	
+	
+	
+	public static int getRoleId(int id){
+		int retour=0;
+		
+		
+		return retour;
 	}
 	
 	

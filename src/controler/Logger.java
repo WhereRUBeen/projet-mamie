@@ -53,17 +53,15 @@ public class Logger extends HttpServlet {
 			userId = ActionUtilisateur.getIdByName(user);
 			if (AuthManager.pwsIsGood(psw, userId)){
 				AuthManager.setUserSession(userId, request);
-			}else{
 				
-				response.setContentType("text/json");
-				
-				PrintWriter out = response.getWriter();
-				
-				out.println(
-						"Erreur, veuillez verifier vos identidiants"
-						);
-				out.close();
-			}				
+				switch (ActionUtilisateur.getRoleId(userId)){
+					case 1 : response.sendRedirect("administration/adminAccueil.jsp"); break;
+					case 2 : response.sendRedirect("corporate/corporateAccueil.jsp"); break;
+					case 3 : response.sendRedirect("autre/autreAccueil.jsp"); break;
+					
+					
+				}
+			}
 		}
 	
 		

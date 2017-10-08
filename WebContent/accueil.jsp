@@ -11,13 +11,25 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<script>function logError() {
-    
-    let perror = document.getElementById('logError');
-    let merror = "Erreur, vos identifiants sont invalide";
-    
-    perror.appendChild(merror);
-}</script>
+<script src="../js/jquery.js"></script>
+<script src="../js/javascript.js">$(document).ready(function {
+    'use strict'
+	   $('#subLog').on('click', function(){
+	    
+	    
+	    let perror = document.getElementById('logError');
+	    let merror = "Erreur, vos identifiants sont invalide";
+	    
+	    perror.appendChild(merror);
+	    
+	})
+	    
+	    
+	    
+	    
+	    
+	});</script>
+
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -250,7 +262,7 @@
 						aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form action="" method="post">
+					<form action="loggin" method="post">
 						<div class="form-group">
 							<i class="fa fa-user"></i> <input type="text"
 								class="form-control" placeholder="Username" required="required">
@@ -260,10 +272,10 @@
 								class="form-control" placeholder="Password" required="required">
 						</div>
 						
-						<p id="logError" style="color : red;"></p>
+						<span id="logError" style="color : red;"></span>
 						
 						<div class="form-group">
-							<input type="submit" onclick="logError" class="btn btn-primary btn-block btn-lg"
+							<input type="submit" id="subLog" class="btn btn-primary btn-block btn-lg"
 								value="Login">
 						</div>
 					</form>
