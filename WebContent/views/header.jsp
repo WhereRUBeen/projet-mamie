@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
-	<%! boolean isConnected = (boolean)session.getValue('isConnected'); %>
+	<% boolean isConnected = session.getValue('isConnected'); %>
 	<% if (isConnected == null){isConnected = false;} %>
 	
 <% if (isConnected){ %>;
