@@ -141,6 +141,17 @@ h2 {
 	text-align: center;
 	color: #fbd8c9;
 }
+
+
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/22220633_128484847806504_3437633051385921536_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
 </style>
 
 </head>
@@ -152,7 +163,7 @@ h2 {
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Mami Cafoutie</a>
+			<a class="navbar-brand" href="#">Mamis Cafoutis</a>
 		</div>
 		<div class="collapse navbar-collapse ">
 			<ul class="nav navbar-nav ml-auto">

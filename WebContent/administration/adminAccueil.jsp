@@ -28,6 +28,16 @@ body, html, .row-offcanvas {
 	height: 100%;
 }
 
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/22069719_119253645416078_7168239853690159104_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
 /*LE MENU DE NAVIGATION*/
 .navbar-nav {
 	float: right;
@@ -143,7 +153,7 @@ h2 {
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Mami Cafoutie</a>
+			<a class="navbar-brand" href="#">Mamis Clafoutis</a>
 		</div>
 		<div class="collapse navbar-collapse ">
 			<ul class="nav navbar-nav ml-auto">

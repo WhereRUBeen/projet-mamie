@@ -17,7 +17,21 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="style/main.css">
+<style>
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21980835_832910976868658_8515152038781255680_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
 
+.divInscription {
+	background: #fbd8c9;
+}
+</style>
 </head>
 <body>
 
@@ -31,7 +45,7 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Mami Cafoutie</a>
+				<a class="navbar-brand" href="#">Mamie Clafoutis</a>
 			</div>
 			<div class="collapse navbar-collapse ">
 				<ul class="nav navbar-nav ml-auto">
@@ -50,10 +64,10 @@
 
 
 
-	<div class="jumbotron">
+	<div class="jumbotron divInscription">
 		<div class="container">
 			<form>
-				<div class="form-group row">
+				<div class="form-group row divInscription">
 					<label for="inputEmail3" class="col-sm-2 col-form-label">Nom</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="inputNom"
