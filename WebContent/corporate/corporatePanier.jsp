@@ -146,7 +146,7 @@ h2 {
 
 </head>
 <body>
-	<%@ include file="views/header.jsp" %>
+	<%@ include file="/views/header.jsp" %>
 
 		<div id="main">
 

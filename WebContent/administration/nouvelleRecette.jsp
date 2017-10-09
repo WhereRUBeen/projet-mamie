@@ -257,11 +257,7 @@ h2 {
 
 						</div>
 					</form>
-
 				</div>
-
-
-
 			</div>
 
 
@@ -287,16 +283,7 @@ h2 {
 
 			<div class="jumbotron container" id="dernierDivNouvelleRecette">
 
-
-
-
-
 			</div>
-
-
-
-
-
 
 
 		</div>
