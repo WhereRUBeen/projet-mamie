@@ -31,6 +31,16 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="style/main.css">
 
+<style>
+body {
+	background: url("http://www.mamieclafoutis.com/wp-content/uploads/2017/08/IMG_8995-compressor.jpg?id=3616" ) no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+</style>
+
 </head>
 <body>
 	<header>
@@ -41,7 +51,7 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Mami Cafoutie</a>
+				<a class="navbar-brand" href="#">Mamis Clafoutis</a>
 			</div>
 			<div class="collapse navbar-collapse ">
 				<ul class="nav navbar-nav ml-auto">

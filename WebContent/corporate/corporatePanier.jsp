@@ -33,6 +33,16 @@ body, html, .row-offcanvas {
 	height: 100%;
 }
 
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21689828_132617094046270_5599749253531435008_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
 h1 {
 	color: red;
 }
@@ -153,7 +163,7 @@ h2 {
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Mami Cafoutie</a>
+			<a class="navbar-brand" href="#">Mamis Clafoutis</a>
 		</div>
 		<div class="collapse navbar-collapse ">
 			<ul class="nav navbar-nav ml-auto">
@@ -205,10 +215,10 @@ h2 {
 
 			</div>
 			<!-- LE TABBLEAU DU PANIER -->
-			
+
 			<div class="jumbotron container" id="secondDivCorpPanier">
-			
-			
+
+
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -222,18 +232,18 @@ h2 {
 
 					</tbody>
 				</table>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 
 			<div class="jumbotron container" id="dernierDivCorpPanier"></div>

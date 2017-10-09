@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Title</title>
+<title>Liste des recettes</title>
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,6 +28,16 @@
 
 body, html, .row-offcanvas {
 	height: 100%;
+}
+
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21827304_301627140313944_3589131210934190080_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
 /*LE MENU DE NAVIGATION*/
@@ -147,7 +157,7 @@ h2 {
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Mami Cafoutie</a>
+			<a class="navbar-brand" href="#">Mamis Clafoutis</a>
 		</div>
 		<div class="collapse navbar-collapse ">
 			<ul class="nav navbar-nav ml-auto">
