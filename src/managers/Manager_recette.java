@@ -8,5 +8,6 @@ package managers;
  *
  */
 public class Manager_recette {
+	
 
 }
