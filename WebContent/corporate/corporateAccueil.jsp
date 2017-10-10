@@ -152,7 +152,7 @@ body {
 
 </head>
 <body>
-	<%@ include file="/views/header.jsp" %>
+	<%@include file="/views/header.jsp"%>
 
 	<div class="row-offcanvas row-offcanvas-left">
 		<div id="sidebar" class="sidebar-offcanvas">

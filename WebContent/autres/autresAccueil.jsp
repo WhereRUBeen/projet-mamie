@@ -12,7 +12,7 @@
     
     
     
-    <%@ include file="/views/header.jsp" %>
+    <%@include file="/views/header.jsp"%>
     
     
     
@@ -26,4 +26,4 @@
     
     
     
-    <%@ include file="/views/footer.jsp" %>
+    <%@include file="/views/footer.jsp"%>
