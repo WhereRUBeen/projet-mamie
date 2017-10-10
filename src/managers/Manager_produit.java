@@ -14,6 +14,11 @@ import entities.Produit;
  *
  */
 public class Manager_produit {
+	private static String afficherProduitParId = "";
+	private static String afficherProduitParNom = "";
+	private static String ajouterProduitParId = "";
+	private static String supprimerProduitbyId = "";
+	
 	
 	
 	
