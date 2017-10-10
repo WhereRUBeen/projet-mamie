@@ -14,6 +14,7 @@ import entities.Produit;
  *
  */
 public class Manager_produit {
+	private static Sting afficherProduit = "select * from produit";
 	private static String afficherProduitParId = "";
 	private static String afficherProduitParNom = "";
 	private static String ajouterProduitParId = "";
@@ -64,10 +65,4 @@ public class Manager_produit {
 		}
 		return produit;
 	}
-	
-	
-	
-	
-	
-
 }

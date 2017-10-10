@@ -1,17 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<% Cookie[] cookies = request.getCookies();
-	boolean tryed = false;
-	
-	if (cookies != null){
-		for (int i = 0; i< cookies.length; i++){
-			Cookie cookie = cookies[i];	
-			if(cookies[i].getName().equals("tryed")){tryed = true;}
-		
-		}
-	}
-%>
 
 <!DOCTYPE html>
 <html lang="en">
