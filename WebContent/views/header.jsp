@@ -1,8 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
-	<% boolean isConnected = session.getValue('isConnected'); %>
-	<% if (isConnected == null){isConnected = false;} %>
+	<% boolean isConnected = false;
+	
+	if (session.getAttribute("isConnect")!= null){
+		isConnected = (boolean)session.getAttribute("isConnected");	
+	}; 
+	
+	 Cookie[] cookies = request.getCookies();
+		boolean tryed = false;
+		
+		if (cookies != null){
+			for (int i = 0; i< cookies.length; i++){
+				Cookie cookie = cookies[i];	
+				if(cookies[i].getName().equals("tryed")){tryed = true;}
+			
+			}
+		}
+	
+	%>
 	
 <% if (isConnected){ %>;
 

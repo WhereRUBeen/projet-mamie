@@ -156,7 +156,7 @@ h2 {
 
 </head>
 <body>
-	<%@ include file="/views/header.jsp" %>
+	<%@include file="/views/header.jsp"%>
 
 		<div id="main">
 
@@ -193,7 +193,11 @@ h2 {
 							<th>Produit</th>
 							<th>Quantité</th>
 							<th>Prix total</th>
+							<th>Supprimer</th>
 						</tr>
+						
+						
+						
 					</thead>
 					<tbody>
 
