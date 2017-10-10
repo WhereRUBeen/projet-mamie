@@ -14,8 +14,16 @@ public class Produit implements Serializable{
 	/*** attribut*/
 	private int id_produit;
 	private String nom_produit;
-	private double quantite;
 	private int recette_id_recette;
+	private double quantite;
+	private String categorie_produit;
+	
+	
+	
+
+
+
+
 	
 	/*** constructor*/
 	public Produit() {
@@ -69,6 +77,22 @@ public class Produit implements Serializable{
 	/*** @param recette_id_recette the recette_id_recette to set*/
 	public void setRecette_id_recette(int recette_id_recette) {
 		this.recette_id_recette = recette_id_recette;
+	}
+	
+	
+	/**
+	 * @return the categorie_produit
+	 */
+	public String getCategorie_produit() {
+		return categorie_produit;
+	}
+
+
+	/**
+	 * @param categorie_produit the categorie_produit to set
+	 */
+	public void setCategorie_produit(String categorie_produit) {
+		this.categorie_produit = categorie_produit;
 	}
 	
 

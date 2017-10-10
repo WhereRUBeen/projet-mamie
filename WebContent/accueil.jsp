@@ -1,6 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<% Cookie[] cookies = request.getCookies();
+	boolean tryed = false;
+	
+	if (cookies != null){
+		for (int i = 0; i< cookies.length; i++){
+			Cookie cookie = cookies[i];	
+			if(cookies[i].getName().equals("tryed")){tryed = true;}
+		
+		}
+	}
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,26 +43,7 @@ body {
 
 </head>
 <body>
-	<header>
-		<div class="navbar navbar-inverse navbar-fixed-top ">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Mamis Clafoutis</a>
-			</div>
-			<div class="collapse navbar-collapse ">
-				<ul class="nav navbar-nav ml-auto">
-					<li><a href="#">Inscription</a></li>
-					<li><a href="#myModal" data-toggle="modal">Connexion</a></li>
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-		<!--/.navbar -->
-	</header>
+	<%@ include file="views/header.jsp" %>
 	<main>
 	<div class="jumbotron" id="bienvenue">
 
@@ -250,7 +243,7 @@ body {
 						aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<form action="" method="post">
+					<form action="loggin" method="post">
 						<div class="form-group">
 							<i class="fa fa-user"></i> <input type="text"
 								class="form-control" placeholder="Username" required="required">
@@ -259,8 +252,11 @@ body {
 							<i class="fa fa-lock"></i> <input type="password"
 								class="form-control" placeholder="Password" required="required">
 						</div>
+						
+						<span id="logError" style="color : red;"></span>
+						
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary btn-block btn-lg"
+							<input type="submit" id="subLog" class="btn btn-primary btn-block btn-lg"
 								value="Login">
 						</div>
 					</form>
