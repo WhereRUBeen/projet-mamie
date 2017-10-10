@@ -156,41 +156,8 @@ h2 {
 
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top ">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-collapse">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Mamis Clafoutis</a>
-		</div>
-		<div class="collapse navbar-collapse ">
-			<ul class="nav navbar-nav ml-auto">
+	<%@ include file="/views/header.jsp" %>
 
-				<li><a href="#">Deconexion</a></li>
-			</ul>
-		</div>
-		<!--/.nav-collapse -->
-	</div>
-	<!--/.navbar -->
-
-	<div class="row-offcanvas row-offcanvas-left">
-		<div id="sidebar" class="sidebar-offcanvas">
-			<div class="col-md-12">
-				<h3></h3>
-				<ul class="nav nav-pills nav-stacked">
-					<li class="active"><a href="#">Corporate</a></li>
-					<li><a href="#">Nouvelle Commande</a></li>
-					<li><a href="#">Panier</a></li>
-					<li><a href="#">Liste des recettes</a></li>
-					<li class="divider"></li>
-					<li class="divider"></li>
-					<li><a href="#">Statistiques</a></li>
-				</ul>
-			</div>
-
-		</div>
 		<div id="main">
 
 

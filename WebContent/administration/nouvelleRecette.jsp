@@ -267,11 +267,7 @@ body {
 
 						</div>
 					</form>
-
 				</div>
-
-
-
 			</div>
 
 
@@ -297,16 +293,7 @@ body {
 
 			<div class="jumbotron container" id="dernierDivNouvelleRecette">
 
-
-
-
-
 			</div>
-
-
-
-
-
 
 
 		</div>
