@@ -6,15 +6,16 @@ package managers;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
 import entities.Produit;
 
 
 /**
- * @author Been WhereU
+ * @author Been WhereU	
  *
  */
 public class Manager_produit {
-	private static Sting afficherProduit = "select * from produit";
+	private static String afficherProduit = "select * from produit";
 	private static String afficherProduitParId = "";
 	private static String afficherProduitParNom = "";
 	private static String ajouterProduitParId = "";
