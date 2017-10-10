@@ -64,10 +64,4 @@ public class Manager_produit {
 		}
 		return produit;
 	}
-	
-	
-	
-	
-	
-
 }
