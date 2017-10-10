@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Accueil | Administration</title>
+<title>Panier | Corporate</title>
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,6 +12,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <link rel="stylesheet" href="style/adminAccueil.css">
@@ -23,15 +25,26 @@
 		});
 	});
 </script>
-<style>
-@charset "UTF-8";
 
-#divCommandesAttentes {
-	background:#fbd8c9;
-}
+<style type="text/css">
+@charset "UTF-8";
 
 body, html, .row-offcanvas {
 	height: 100%;
+}
+
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21689828_132617094046270_5599749253531435008_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+h1 {
+	color: red;
 }
 
 /*LE MENU DE NAVIGATION*/
@@ -121,19 +134,17 @@ body {
 	padding-left: 13px;
 }
 
-
-
 /**/
-#premierDivCommandesAttentes {
+#premierDivCorpPanier {
 	background: #9e3c51;
 	margin-top: 25px;
 }
 
-#divCommandesAttentes{
+#secondDivCorpPanier {
 	background: #fbd8c9;
 }
 
-#dernierDivCommandesAttentes {
+#dernierDivCorpPanier {
 	background: #9e3c51;
 }
 
@@ -141,79 +152,17 @@ h2 {
 	text-align: center;
 	color: #fbd8c9;
 }
-
-
-body {
-	background:
-		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/22220633_128484847806504_3437633051385921536_n.jpg" )
-		no-repeat center center fixed;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-}
 </style>
 
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top ">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-collapse">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Mamis Cafoutis</a>
-		</div>
-		<div class="collapse navbar-collapse ">
-			<ul class="nav navbar-nav ml-auto">
+	<%@ include file="/views/header.jsp" %>
 
-				<li><a href="#">Deconexion</a></li>
-			</ul>
-		</div>
-		<!--/.nav-collapse -->
-	</div>
-	<!--/.navbar -->
-
-	<div class="row-offcanvas row-offcanvas-left">
-		<div id="sidebar" class="sidebar-offcanvas">
-			<div class="col-md-12">
-				<h3></h3>
-				<ul class="nav nav-pills nav-stacked">
-					<li class="active"><a href="#">Administration</a></li>
-					<li><a href="nouvelleRecette.html">Nouvelle recette</a></li>
-					<li><a href="#">Liste des recettes</a></li>
-					<li class="divider"></li>
-					<div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button"
-							data-toggle="dropdown">
-							Utilisateurs <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">En attentes</a></li>
-							<li><a href="#">Membres</a></li>
-						</ul>
-					</div>
-					<li class="divider"></li>
-					<div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button"
-							data-toggle="dropdown">
-							Commandes <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">En attentes</a></li>
-							<li><a href="#">Validées</a></li>
-						</ul>
-					</div>
-					<li><a href="#">Statistiques</a></li>
-				</ul>
-			</div>
-
-		</div>
 		<div id="main">
-			<div class="jumbotron container" id="premierDivCommandesAttentes">
-			
-					<h2>Commandes à validées</h2>
+
+
+			<div class="jumbotron container" id="premierDivCorpPanier">
+				<h2>Votre Panier</h2>
 
 				<div class='col-xs-12 col-sm-12 col-md-4 col-lg-4' id="divRecherche">
 
@@ -230,16 +179,19 @@ body {
 					</form>
 
 				</div>
-			
-			
+
 			</div>
-			<div class="jumbotron container " id="divCommandesAttentes">
+			<!-- LE TABBLEAU DU PANIER -->
+
+			<div class="jumbotron container" id="secondDivCorpPanier">
+
 
 				<table class="table table-hover">
 					<thead>
 						<tr>
 							<th>Numero Commande</th>
-							<th>Quantiés Produits</th>
+							<th>Produit</th>
+							<th>Quantité</th>
 							<th>Prix total</th>
 						</tr>
 					</thead>
@@ -247,12 +199,21 @@ body {
 
 					</tbody>
 				</table>
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 
-			<div class="jumbotron container" id="dernierDivCommandesAttentes"></div>
-
-
-
+			<div class="jumbotron container" id="dernierDivCorpPanier"></div>
 
 		</div>
 	</div>

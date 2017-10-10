@@ -163,6 +163,16 @@ h2 {
 	text-align: center;
 	color: #fbd8c9;
 }
+
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/21690803_126232098101364_1809742881724825600_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
 </style>
 
 
@@ -187,7 +197,7 @@ h2 {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Mami Cafoutie</a>
+				<a class="navbar-brand" href="#">Mamis Clafoutis</a>
 			</div>
 			<div class="collapse navbar-collapse ">
 				<ul class="nav navbar-nav ml-auto">
@@ -257,18 +267,14 @@ h2 {
 
 						</div>
 					</form>
-
 				</div>
-
-
-
 			</div>
 
 
 			<div class="jumbotron container" id="secondDivNouvelleRecette">
 
 
-				<form class="cf">
+				<form class="cf" method="post" action="">
 					<div class="half left cf">
 						<input type="text" id="input-name" placeholder="Nom Recette">
 						<input type="email" id="input-email" placeholder="lorem">
@@ -287,16 +293,7 @@ h2 {
 
 			<div class="jumbotron container" id="dernierDivNouvelleRecette">
 
-
-
-
-
 			</div>
-
-
-
-
-
 
 
 		</div>

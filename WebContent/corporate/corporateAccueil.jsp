@@ -138,28 +138,21 @@ h2 {
 	text-align: center;
 	color: #fbd8c9;
 }
+
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/22069719_119253645416078_7168239853690159104_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
 </style>
 
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top ">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-collapse">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Mami Cafoutie</a>
-		</div>
-		<div class="collapse navbar-collapse ">
-			<ul class="nav navbar-nav ml-auto">
-
-				<li><a href="#">Deconexion</a></li>
-			</ul>
-		</div>
-		<!--/.nav-collapse -->
-	</div>
-	<!--/.navbar -->
+	<%@ include file="/views/header.jsp" %>
 
 	<div class="row-offcanvas row-offcanvas-left">
 		<div id="sidebar" class="sidebar-offcanvas">
