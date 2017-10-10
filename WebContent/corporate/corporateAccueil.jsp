@@ -138,6 +138,16 @@ h2 {
 	text-align: center;
 	color: #fbd8c9;
 }
+
+body {
+	background:
+		url("https://scontent-yyz1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/22069719_119253645416078_7168239853690159104_n.jpg" )
+		no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
 </style>
 
 </head>
